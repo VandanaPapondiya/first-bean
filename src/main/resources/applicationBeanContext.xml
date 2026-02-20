@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <!-- Student class ko as a bean declare krdia it means spring is class ke object ko tu manage kregaa and bean name is myBean1-->
+    <bean id="studentBean" class="com.example.Student"/>
+        <!--Spring Container dekhega ki is naam se bean bnna hai or ye uski class hai agr yaha koi problem hui to error aajayegi-->
+        <!--To Spring conatiner .xml file mai jitne bhi beans create hone hai vo bnake Application-Context mai store krdega-->
+        <!--Fir jaha pr bhi hme us bean ki jarurat hai hum Application-context ko fetch krnge fir apllication-context ke object se us bean ko fetch krlenge-->
+        <!--All bean id must be different-->
+
+        <!-- property definitions here -->
+    <bean id="collegeBean" class="com.example.College">
+        <constructor-arg ref="studentBean"/>
+    </bean>
+
+</beans>
