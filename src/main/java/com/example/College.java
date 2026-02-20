@@ -15,7 +15,7 @@ public class College {
         ➡ This is called Dependency
 
        -So yes
-👉     College depends on Student
+       College depends on Student
      */
 
     public void startClass() {
